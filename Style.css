@@ -204,6 +204,9 @@ body {
     letter-spacing: -0.02em;
     transition: all var(--transition-base);
 }
+a.logo {
+  text-decoration: none;
+}
 
 .logo-underline {
     position: absolute;
