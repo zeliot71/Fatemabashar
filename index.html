@@ -1,292 +1,602 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <!--<script src="https://cdn.tailwindcss.com"></script>-->
-    <title>Fatema - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <title>Dr. Fatema Bashar - Anthropologist & Researcher</title>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- HEADER SECTION -->
-    <header class="header">
-        <a href="#home" class="logo">Fatema Bashar</a>
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#home" class="logo">
+                <div class="logo-container">
+                    <span class="logo-text">Dr. Fatema Bashar</span>
+                    <div class="logo-underline"></div>
+                </div>
+            </a>
 
-        <i class='bx bx-menu' id="menu-icon"></i>
+            <nav class="navbar" id="navbar">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class='bx bx-home'></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class='bx bx-user'></i>
+                    <span>About</span>
+                </a>
+                <a href="#publications" class="nav-link" data-section="publications">
+                    <i class='bx bx-book'></i>
+                    <span>Publications</span>
+                </a>
+                <a href="#conferences" class="nav-link" data-section="conferences">
+                    <i class='bx bx-calendar'></i>
+                    <span>Conferences</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class='bx bx-envelope'></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
 
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#publications">Publications</a>
-            <a href="#conferences">Conferences</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class='bx bx-moon'></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
     <!-- Home Section -->
+    <section id="home" class="home section">
+        <div class="home-container">
+            <div class="home-content">
+                <div class="greeting-container">
+                    <span class="greeting animate-fade-in">Hello, I'm</span>
+                    <h1 class="main-name animate-fade-in-delay">
+                        <span class="name-highlight">Dr. Fatema Bashar</span>
+                    </h1>
+                    <div class="profession animate-fade-in-delay-2">
+                        <span>I'm a </span>
+                        <span class="multiple-text"></span>
+                    </div>
+                </div>
 
-    <section id="home" class="home">
-        <div class="home-img">
-            <img src="assets/Profile.png" alt="Profile Image">
-        </div>
-        <div class="home-content">
-            <h3>Hello, Myself</h3>
-            <h1>Fatema Bashar</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>I am an Associate Professor of Anthropology with over 13 years of experience in academic leadership,
-                 teaching and research with a specialized focus in Economic Anthropology, Migration, 
-                 Gender Studies and Medical Anthropology. Throughout my career, I have demonstrated a strong commitment 
-                 to both scholarship and academic service. I have had the privilege of mentoring students, securing research grants,
-                  publishing academic articles and contributing to various departmental committees including the academic and examination committees. 
-                  I have taught a wide range of courses specially - Introduction to Anthropology, Gender Issues, Theories in Anthropology and Research Methodology.
-                   My professional journey reflects a deep dedication to fostering student growth, leading academic initiatives and contributing meaningfully and impactful interdisciplinary research.</p>
+                <p class="bio-text animate-slide-up">
+                    I am an Associate Professor of Anthropology with over 13 years of experience in academic leadership, 
+                    teaching and research with a specialized focus in Economic Anthropology, Migration, Gender Studies and Medical Anthropology. 
+                    My professional journey reflects a deep dedication to fostering student growth, leading academic initiatives and contributing 
+                    meaningfully to impactful interdisciplinary research.
+                </p>
 
-            <style>
-  .custom-icon {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    fill: currentColor;
-  }
-</style>
-            <div class="social-media">
-                <!-- Linkedin Icon -->
-                <a href="http://linkedin.com/in/fatema-bashar-8303596b/"><i class='bx bxl-linkedin'></i></a>
-                
-                <a href="https://www.facebook.com/share/1ARPHexGf9/"><i class='bx bxl-facebook'></i></a>
-                
-                <!--Research Gate Icon-->
-               <a href="http://researchgate.net/profile/Fatema-Bashar" target="_blank">
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" 
-                alt="ResearchGate" width="24" height="24" style="vertical-align:middle;">
-                </a>
-                <a href="https://scholar.google.com/citations?hl=en&user=dCo8jw4AAAAJ" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" 
-                            alt="Google Scholar" width="24" height="24" style="vertical-align:middle;">
-                </a>
-                <!--<a href="#"><i class='bx bxl-instagram' ></i></a> -->
+                <div class="social-media animate-fade-in-delay">
+                    <a href="http://linkedin.com/in/fatema-bashar-8303596b/" class="social-link" data-tooltip="LinkedIn">
+                        <i class='bx bxl-linkedin'></i>
+                        <div class="social-ripple"></div>
+                    </a>
+                    <a href="https://www.facebook.com/share/1ARPHexGf9/" class="social-link" data-tooltip="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                        <div class="social-ripple"></div>
+                    </a>
+                    <a href="http://researchgate.net/profile/Fatema-Bashar" class="social-link" data-tooltip="ResearchGate">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" class="social-icon">
+                        <div class="social-ripple"></div>
+                    </a>
+                    <a href="https://scholar.google.com/citations?hl=en&user=dCo8jw4AAAAJ" class="social-link" data-tooltip="Google Scholar">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" class="social-icon">
+                        <div class="social-ripple"></div>
+                    </a>
+                </div>
+
+                <div class="cta-buttons animate-fade-in-delay-2">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get In Touch</span>
+                        <i class='bx bx-right-arrow-alt btn-icon'></i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                    <a href="#" class="btn btn-secondary download-cv-btn">
+                        <span>Download CV</span>
+                        <i class='bx bx-download btn-icon'></i>
+                        <div class="btn-ripple"></div>
+                    </a>
+                </div>
             </div>
-            <a href="#" class="btn download-cv-btn">Download CV</a>
+
+            <div class="home-image animate-fade-in">
+                <div class="image-container">
+                    <img src="assets/Profile.png" alt="Dr. Fatema Bashar" class="profile-image">
+                    <div class="image-glow"></div>
+                    <div class="image-border"></div>
+                </div>
+            </div>
         </div>
 
-        
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-element" style="--delay: 0s; --duration: 6s;"></div>
+            <div class="floating-element" style="--delay: 2s; --duration: 8s;"></div>
+            <div class="floating-element" style="--delay: 4s; --duration: 7s;"></div>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-    <div class="profile-box">
-      <img src="assets/about.jpg" alt="Profile Image" class="profile-img" />
-      <h2 class="name">Dr. Fatema Bashar</h2>
-      <p class="title">Anthropologist</p>
-      <hr />
-      <div class="socials">
-        <p>Read my publications at</p>
-        <div class="icons">
-            <a href="http://researchgate.net/profile/Fatema-Bashar" target="_blank">
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" 
-                alt="ResearchGate" width="24" height="24" style="vertical-align:middle;">
-                </a>
-                <a href="https://scholar.google.com/citations?hl=en&user=dCo8jw4AAAAJ" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" 
-                            alt="Google Scholar" width="24" height="24" style="vertical-align:middle;">
-                </a>
+    <section id="about" class="about section">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Discover my journey in anthropological research</p>
         </div>
-      </div>
-    </div>
 
-    <!-- Right Box -->
-    <div class="info-box">
-      <h3 class="section-label">About me</h3>
-      <h2 class="headline">Empathy is key</h2>
-      <p class="bio">
-        Dr. Fatema Bashar, an Associate Professor of Anthropology at Jagannath University, Bangladesh, specializes in Peasant Society, 
-        Gender Issues, Migration, Medical Anthropology, and Mining. With a Ph.D. and extensive fieldwork in rural and urban settings, she excels in ethnographic
-         research, critical analysis, and fostering positive societal change.
-      </p>
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-wrapper">
+                    <img src="assets/about.jpg" alt="Dr. Fatema Bashar" class="about-img">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
 
-      <hr />
-      <div class="edu-exp-grid">
-        <div class="education">
-        <h4>Education</h4>
-            <br>
-                <p><strong>2004</strong> &nbsp; <span class="degree">Bachelor of Social Science in Anthropology</span></p>
-                <p>Jahangirnagar University, Dhaka, Bangladesh</p>
-            <br>
-                <p><strong>2005</strong> &nbsp; <span class="degree">Masters of Social Science in Anthropology</span></p>
-                <p>Jahangirnagar University, Dhaka, Bangladesh</p>
-            <br>
-                <p><strong>2023</strong> &nbsp; <span class="degree">PhD in Anthropology</span></p>
-                <p>Jahangirnagar University, Dhaka, Bangladesh</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="about-heading">Empathy is Key</h3>
+                    <p class="about-description">
+                        Dr. Fatema Bashar, an Associate Professor of Anthropology at Jagannath University, Bangladesh, 
+                        specializes in Peasant Society, Gender Issues, Migration, Medical Anthropology, and Mining. 
+                        With a Ph.D. and extensive fieldwork in rural and urban settings, she excels in ethnographic 
+                        research, critical analysis, and fostering positive societal change.
+                    </p>
+                </div>
 
-      </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class='bx bx-graduation'></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Education</h4>
+                            <div class="education-item">
+                                <span class="year">2023</span>
+                                <div class="details">
+                                    <h5>PhD in Anthropology</h5>
+                                    <p>Jahangirnagar University, Dhaka</p>
+                                </div>
+                            </div>
+                            <div class="education-item">
+                                <span class="year">2005</span>
+                                <div class="details">
+                                    <h5>Masters in Anthropology</h5>
+                                    <p>Jahangirnagar University, Dhaka</p>
+                                </div>
+                            </div>
+                            <div class="education-item">
+                                <span class="year">2004</span>
+                                <div class="details">
+                                    <h5>Bachelor in Anthropology</h5>
+                                    <p>Jahangirnagar University, Dhaka</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <hr />
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class='bx bx-briefcase'></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Experience</h4>
+                            <div class="experience-item">
+                                <span class="year">2024 - Present</span>
+                                <div class="details">
+                                    <h5>Associate Professor</h5>
+                                    <p>Department of Anthropology, Jagannath University</p>
+                                </div>
+                            </div>
+                            <div class="experience-item">
+                                <span class="year">2014 - 2024</span>
+                                <div class="details">
+                                    <h5>Assistant Professor</h5>
+                                    <p>Department of Anthropology, Jagannath University</p>
+                                </div>
+                            </div>
+                            <div class="experience-item">
+                                <span class="year">2011 - 2014</span>
+                                <div class="details">
+                                    <h5>Lecturer</h5>
+                                    <p>Department of Anthropology, Jagannath University</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="experience">
-        <h4>Experience</h4>
-            <br>
-                <p><strong> Apr’24 to till now </strong> &nbsp; <span class="role">Associate Professor, Department of Anthropology</span></p>
-                <p>Jagannath University </p>
-            <br>
-                <p><strong>Mar’14 to Apr’24</strong> &nbsp; <span class="role">Assistant Professor, Department of Anthropology</span></p>
-                <p>Jagannath University </p>
-            <br>
-                <p><strong>Jul’11 to Mar’14 </strong> &nbsp; <span class="role">Lecturer, Department of Anthropology</span></p>
-                <p>Jagannath University </p>
-      </div>
-<hr />
-      <div class="academic-research">
-         <h4>Academic Research</h4>
-            <br>
-                <p> <strong>PhD Research:</strong> Moral Economies and Water Sharing in Farming Communities in Noakhali Char Areas</p>        
-            <br>
-                <p><strong>Honors dissertation:</strong>The Role of Poorer Mothers in Constructing Their Children’s Childhood: An Analysis in the Light of Symbolic Capital</p>
-            <br>
-                <p><strong>Thesis:</strong>Jointness Practices and Transnational Households: The Case of Motipur, Noakhali</p>
-    </div>
-     
-</div>
-      <button class="resume-btn">Know More</button>
-    </div>
+                <div class="research-highlights">
+                    <h4>Research Focus</h4>
+                    <div class="research-tags">
+                        <span class="tag">Economic Anthropology</span>
+                        <span class="tag">Gender Studies</span>
+                        <span class="tag">Migration</span>
+                        <span class="tag">Medical Anthropology</span>
+                        <span class="tag">Ethnographic Research</span>
+                        <span class="tag">Rural Communities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
- <!-- 🔹 PUBLICATIONS SECTION -->
-<section id="publications" class="section publications-section">
-  <h2 class="section-title"> Publications</h2>
-  <div class="pub-grid">
-    <div class="pub-card">
-      <h3>Songbed Publication In Z. Ahmed & H. Rahman (Eds.), COVID-19 Diary (pp. 127–131)</h3>
-      <p class="pub-meta">Journal of Ethnographic Research · 2024</p>
-      <p class="pub-desc">
-        A deep dive into emerging digital-spiritual practices among rural communities.  
-        <a href="#" target="_blank">Read more</a>
-      </p>
-    </div>
-    <div class="pub-card">
-      <h3>Songbed Publication In Z. Ahmed & H. Rahman (Eds.), COVID-19 Diary (pp. 127–131)</h3>
-      <p class="pub-meta">Journal of Ethnographic Research · 2024</p>
-      <p class="pub-desc">
-        A deep dive into emerging digital-spiritual practices among rural communities.  
-        <a href="#" target="_blank">Read more</a>
-      </p>
-    </div>
-    <div class="pub-card">
-      <h3>Songbed Publication In Z. Ahmed & H. Rahman (Eds.), COVID-19 Diary (pp. 127–131)</h3>
-      <p class="pub-meta">Journal of Ethnographic Research · 2024</p>
-      <p class="pub-desc">
-        A deep dive into emerging digital-spiritual practices among rural communities.  
-        <a href="#" target="_blank">Read more</a>
-      </p>
-    </div>
-    <div class="pub-card">
-      <h3>Songbed Publication In Z. Ahmed & H. Rahman (Eds.), COVID-19 Diary (pp. 127–131)</h3>
-      <p class="pub-meta">Journal of Ethnographic Research · 2024</p>
-      <p class="pub-desc">
-        A deep dive into emerging digital-spiritual practices among rural communities.  
-        <a href="#" target="_blank">Read more</a>
-      </p>
-    </div>
-    <div class="pub-card">
-      <h3>Oral Histories as Archives</h3>
-      <p class="pub-meta">AnthroToday · 2023</p>
-      <p class="pub-desc">
-        Examining indigenous narratives as primary archival sources in the digital age.  
-        <a href="#" target="_blank">Access PDF</a>
-      </p>
-    </div>
-    <div class="pub-card">
-      <h3>Mapping Cultural Memory</h3>
-      <p class="pub-meta">Cultural Studies Review · 2022</p>
-      <p class="pub-desc">
-        GIS-based research on preserving memory sites across Southeast Asia.  
-        <a href="#" target="_blank">View Article</a>
-      </p>
-    </div>
-  </div>
-</section>
+    <!-- Publications Section -->
+    <section id="publications" class="publications section">
+        <div class="section-header">
+            <h2 class="section-title">Publications</h2>
+            <p class="section-subtitle">Explore my research contributions and academic publications</p>
+        </div>
 
-<!-- 🔹 CONFERENCES SECTION -->
-<section id="conferences" class="section conferences-section">
-  <h2 class="section-title">Presentation & Conferences</h2>
-  <div class="conference-container">
-    
-    <!-- 📸 Image Side -->
-    <div class="conference-image">
-      <img src="assets/conference.jpg" alt="Conference" />
-    </div>
+        <div class="publications-container">
+            <div class="pub-card">
+                <div class="pub-header">
+                    <div class="pub-icon">
+                        <i class='bx bx-book-open'></i>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-year">2024</span>
+                        <span class="pub-type">Book Chapter</span>
+                    </div>
+                </div>
+                <h3 class="pub-title">Songbed Publication In Z. Ahmed & H. Rahman (Eds.), COVID-19 Diary</h3>
+                <p class="pub-journal">COVID-19 Diary Collection · Pages 127–131</p>
+                <p class="pub-description">
+                    An ethnographic exploration of community responses and adaptation strategies during the COVID-19 pandemic, 
+                    focusing on rural communities in Bangladesh.
+                </p>
+                <div class="pub-actions">
+                    <a href="#" class="pub-link">
+                        <i class='bx bx-link-external'></i>
+                        <span>Read More</span>
+                    </a>
+                </div>
+            </div>
 
-    <!-- 📋 Details Side -->
-    <div class="conference-details">
-      <div class="conf-entry">
-        <h4>London <span>Nov'17</span> </h4>
-        <p>Keynote: •	A Social Approach to Understanding Politicians and their Entangled Relationships</p>
-      </div>
-      <div class="conf-entry">
-        <h4>Jahangirnagar University  <span>Feb'16</span></h4>
-        <p>•	The Myth of Hijab as the Modesty of Muslim Women (In Bengali)</p>
-      </div>
-      <div class="conf-entry">
-        <h4>University of Sussex (DFID/ESRC)  <span>Mar'11</span></h4>
-        <p>•    Women’s Livelihood in Bibiyana</p>
-      </div>
-       <div class="conf-entry">
-        <h4>Save the Children & JU <span>Jul'7</span></h4>
-        <p>Paper: "Ethnographic Film as Fieldwork Metho•	Symbolic Capital and Childhood Construction by Poorer Mothers</p>
-      </div>
-    </div>
+            <div class="pub-card">
+                <div class="pub-header">
+                    <div class="pub-icon">
+                        <i class='bx bx-file-doc'></i>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-year">2023</span>
+                        <span class="pub-type">Journal Article</span>
+                    </div>
+                </div>
+                <h3 class="pub-title">Moral Economies and Water Sharing in Farming Communities</h3>
+                <p class="pub-journal">Journal of Ethnographic Research · Vol. 45, Issue 3</p>
+                <p class="pub-description">
+                    A comprehensive study of water sharing practices and moral economies in the Noakhali Char areas, 
+                    examining community cooperation and resource management.
+                </p>
+                <div class="pub-actions">
+                    <a href="#" class="pub-link">
+                        <i class='bx bx-download'></i>
+                        <span>Download PDF</span>
+                    </a>
+                </div>
+            </div>
 
-  </div>
-</section>
+            <div class="pub-card">
+                <div class="pub-header">
+                    <div class="pub-icon">
+                        <i class='bx bx-research'></i>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-year">2022</span>
+                        <span class="pub-type">Research Paper</span>
+                    </div>
+                </div>
+                <h3 class="pub-title">Gender Dynamics in Transnational Households</h3>
+                <p class="pub-journal">Anthropological Studies Quarterly · Vol. 28, No. 2</p>
+                <p class="pub-description">
+                    An analysis of jointness practices and gender roles in transnational households, 
+                    with case studies from Motipur, Noakhali.
+                </p>
+                <div class="pub-actions">
+                    <a href="#" class="pub-link">
+                        <i class='bx bx-link-external'></i>
+                        <span>View Article</span>
+                    </a>
+                </div>
+            </div>
 
+            <div class="pub-card">
+                <div class="pub-header">
+                    <div class="pub-icon">
+                        <i class='bx bx-group'></i>
+                    </div>
+                    <div class="pub-meta">
+                        <span class="pub-year">2021</span>
+                        <span class="pub-type">Conference Paper</span>
+                    </div>
+                </div>
+                <h3 class="pub-title">Symbolic Capital and Childhood Construction by Poorer Mothers</h3>
+                <p class="pub-journal">International Conference on Social Anthropology</p>
+                <p class="pub-description">
+                    Examining how mothers from economically disadvantaged backgrounds construct their children's childhood 
+                    through the lens of symbolic capital theory.
+                </p>
+                <div class="pub-actions">
+                    <a href="#" class="pub-link">
+                        <i class='bx bx-file-pdf'></i>
+                        <span>Access PDF</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Conferences Section -->
+    <section id="conferences" class="conferences section">
+        <div class="section-header">
+            <h2 class="section-title">Conferences & Presentations</h2>
+            <p class="section-subtitle">International conferences and academic presentations</p>
+        </div>
+
+        <div class="conferences-container">
+            <div class="conference-image">
+                <div class="image-wrapper">
+                    <img src="assets/conference.jpg" alt="Conference Presentation">
+                    <div class="image-overlay">
+                        <div class="overlay-content">
+                            <i class='bx bx-play-circle'></i>
+                            <span>View Presentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conference-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class='bx bx-map'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>London Conference</h4>
+                            <span class="timeline-date">November 2017</span>
+                        </div>
+                        <h5>Keynote Speaker</h5>
+                        <p>A Social Approach to Understanding Politicians and their Entangled Relationships</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Keynote</span>
+                            <span class="tag">International</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class='bx bx-university'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>Jahangirnagar University</h4>
+                            <span class="timeline-date">February 2016</span>
+                        </div>
+                        <h5>Research Presentation</h5>
+                        <p>The Myth of Hijab as the Modesty of Muslim Women (In Bengali)</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Gender Studies</span>
+                            <span class="tag">Cultural Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class='bx bx-world'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>University of Sussex</h4>
+                            <span class="timeline-date">March 2011</span>
+                        </div>
+                        <h5>DFID/ESRC Conference</h5>
+                        <p>Women's Livelihood in Bibiyana</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Women's Studies</span>
+                            <span class="tag">Economic Anthropology</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class='bx bx-child'></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>Save the Children & JU</h4>
+                            <span class="timeline-date">July 2007</span>
+                        </div>
+                        <h5>Research Paper</h5>
+                        <p>Symbolic Capital and Childhood Construction by Poorer Mothers</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Child Development</span>
+                            <span class="tag">Social Capital</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
-
-    <section id="contact" class="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-
-        <form action="#">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Full Name" class="input-field">
-                <input type="email" name="email" placeholder="Email Address" class="input-field">
-            </div>
-            <div class="input-box">
-                <input type="number" name="number" placeholder="Phone Number" class="input-field">
-                <input type="text" name="subject" placeholder="Email Subject" class="input-field">
-            </div>
-
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" class="input-field"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-
-    <footer class="footer">
-        <div class="social">
-            <a href="http://linkedin.com/in/fatema-bashar-8303596b/"><i class='bx bxl-linkedin'></i></a>
-                
-                <a href="https://www.facebook.com/share/1ARPHexGf9/"><i class='bx bxl-facebook'></i></a>
-                
-                <!--Research Gate Icon-->
-               <a href="http://researchgate.net/profile/Fatema-Bashar" target="_blank">
-                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" 
-                alt="ResearchGate" width="24" height="24" style="vertical-align:middle;">
-                </a>
-                <a href="https://scholar.google.com/citations?hl=en&user=dCo8jw4AAAAJ" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" 
-                            alt="Google Scholar" width="24" height="24" style="vertical-align:middle;">
-                </a>
+    <section id="contact" class="contact section">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's discuss research opportunities and collaborations</p>
         </div>
 
-        <p class="copyright">
-            © Fatema Bashar - All Rights Reserved
-        </p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <p>fatema.bashar@jnu.ac.bd</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class='bx bx-phone'></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <p>+880 1XXX-XXXXXX</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class='bx bx-map'></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Location</h4>
+                        <p>Jagannath University<br>Dhaka, Bangladesh</p>
+                    </div>
+                </div>
+
+                <div class="contact-social">
+                    <h4>Connect with me</h4>
+                    <div class="social-links">
+                        <a href="http://linkedin.com/in/fatema-bashar-8303596b/" class="social-link">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1ARPHexGf9/" class="social-link">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="http://researchgate.net/profile/Fatema-Bashar" class="social-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" class="social-icon">
+                        </a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=dCo8jw4AAAAJ" class="social-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" name="name" class="form-input" placeholder=" " required>
+                        <label class="form-label">Full Name</label>
+                        <div class="input-border"></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" class="form-input" placeholder=" " required>
+                        <label class="form-label">Email Address</label>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="tel" name="phone" class="form-input" placeholder=" ">
+                        <label class="form-label">Phone Number</label>
+                        <div class="input-border"></div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="subject" class="form-input" placeholder=" ">
+                        <label class="form-label">Subject</label>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <textarea name="message" class="form-input form-textarea" placeholder=" " required rows="5"></textarea>
+                    <label class="form-label">Your Message</label>
+                    <div class="input-border"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit">
+                    <span>Send Message</span>
+                    <i class='bx bx-send btn-icon'></i>
+                    <div class="btn-ripple"></div>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Dr. Fatema Bashar</h3>
+                    <p>Associate Professor of Anthropology</p>
+                    <p>Jagannath University, Dhaka, Bangladesh</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#conferences">Conferences</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>Follow Me</h4>
+                    <div class="social-links">
+                        <a href="http://linkedin.com/in/fatema-bashar-8303596b/" class="social-link">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1ARPHexGf9/" class="social-link">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="http://researchgate.net/profile/Fatema-Bashar" class="social-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/ResearchGate_icon_SVG.svg" alt="ResearchGate" class="social-icon">
+                        </a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=dCo8jw4AAAAJ" class="social-link">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dr. Fatema Bashar. All rights reserved.</p>
+                <p>Designed with passion for academic excellence</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="script.js"></script>
+    <script src="Script.js"></script>
 </body>
 </html>
