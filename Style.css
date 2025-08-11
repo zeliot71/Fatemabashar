@@ -165,6 +165,8 @@ section {
     animation: floatImage 4s ease-in-out infinite;
     position: relative;
     z-index: 2;
+    max-width: 400px;
+    min-width: 250px;
 }
 
 .image-glow {
@@ -209,6 +211,7 @@ section {
 .home-content {
     margin-left: 5rem;
     animation: slideInRight 1s ease-out;
+    max-width: 600px;
 }
 
 .greeting {
@@ -449,77 +452,6 @@ section {
 
 /* About Section 
 
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    background: var(--snd-bg-color);
-}
-
-.about-img img {
-    width: 25vw;
-    width: 25vw;
-    border: 2px solid var(--main-color);
-    border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-}
-
-/*---.about-img img:hover {
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 35px var(--main-color),
-                0 0 55px var(--main-color);
-}
-
-.heading {
-    text-align: center;
-    font-size: 6rem;
-}
-
-.about-content {
-    padding: 0 4rem;
-}
-
-.about-content h2 {
-    text-align: left;
-    line-height: 1.2;
-}
-
-.about-content h3 {
-    font-size: 3rem;
-}
-
-.about-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem;
-}
-.aboutBox {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap; /* makes it responsive 
-}
-
-.about-content, .about-img {
-  flex: 1 1 45%;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  border-radius: 10px;
-  background-color: #fff; /* optional 
-}
-
-.about-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-} 
 */
 
 .about-section {
@@ -1006,6 +938,8 @@ section {
   font-size: 14.5px;
   text-align: left;
   margin: -5px 0 10px;
+  display: block;
+  padding-left: 5px;
 
 }
 
@@ -1156,6 +1090,7 @@ section {
     }
     .home{
         flex-direction: column;
+        text-align: center;
     }
     .home-content h3{
         font-size: 2.6rem;
@@ -1165,11 +1100,12 @@ section {
     }
     .home-content{
         order: 2;
-        margin-left: 1rem;
+        margin-left: 0;
+        margin-top: 2rem;
     }
     .home-img img{
         width: 70vw;
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
     .about{
         flex-direction: column-reverse;
@@ -1186,15 +1122,35 @@ section {
 @media (max-width:617px) {
     .home-img img{
         width: 70vw;
-        margin-top: 8rem;
+        margin-top: 4rem;
     }
     .about-img img{
         width: 70vw;
         margin-top: 4rem;
     }
+    
+    .home-content {
+        padding: 0 1rem;
+    }
+    
+    .bio-text {
+        font-size: 1.4rem;
+    }
 }
 @media (max-width:450px) {
     html{
         font-size: 50%;
+    }
+    
+    .main-name {
+        font-size: 4rem;
+    }
+    
+    .greeting {
+        font-size: 2.4rem;
+    }
+    
+    .profession {
+        font-size: 2.4rem;
     }
 }

@@ -23,23 +23,50 @@ const typed = new Typed('.multiple-text',  {
  });
 
  const form = document.querySelector('form')
- {
-    function sendEmail()
-    {
-            Email.send({
-            SecureToken: "64b7ac34-fb7f-4454-b858-31fd962cf639",
-            To: 'zihadsha701@gmail.com',
-            From: 'zihadsha701@gmail.com',
-            Subject: "This is the subject",
-            Body: "And this is the body"
-        }).then(
-        message => alert(message)
-        );
-    }
- }
+ const nameField = document.querySelector('input[name="name"]');
+ const emailField = document.querySelector('input[name="email"]');
+ const phoneField = document.querySelector('input[name="number"]');
+ const subjectField = document.querySelector('input[name="subject"]');
+ const messageField = document.querySelector('textarea[name="message"]');
+ const submitBtn = document.querySelector('input[type="submit"]');
 
- form.addEventListener("submit",(e) =>{
-     e.preventDefault();
+ function validateForm() {
+     let isValid = true;
+     
+     // Remove existing error messages
+     document.querySelectorAll('.error-txt').forEach(error => error.remove());
+     
+     // Validate name
+     if (!nameField.value.trim()) {
+         showError(nameField, 'Name is required');
+         isValid = false;
+     }
+     
+     // Validate email
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (!emailField.value.trim()) {
+         showError(emailField, 'Email is required');
+         isValid = false;
+     } else if (!emailRegex.test(emailField.value)) {
+         showError(emailField, 'Please enter a valid email');
+         isValid = false;
+     }
+     
+     // Validate message
+     if (!messageField.value.trim()) {
+         showError(messageField, 'Message is required');
+         isValid = false;
+     }
+     
+     return isValid;
+ }
+ 
+ function showError(field, message) {
+     const errorDiv = document.createElement('div');
+     errorDiv.className = 'error-txt';
+     errorDiv.textContent = message;
+     field.parentNode.insertBefore(errorDiv, field.nextSibling);
+ }
 
 function sendEmail() {
     const templateParams = {
@@ -158,5 +185,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-});
 });
